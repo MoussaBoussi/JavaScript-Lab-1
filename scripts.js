@@ -13,12 +13,13 @@ if (playGame === "yes"){
             playerHP -= Math.floor(Math.random() * 2) + 1;
             grantHP -= Math.floor(Math.random() * 2) + 1;
             if (grantHP <= 0 && wins === 2) { //IF you defeat grant and already have 2 previous wins
-                console.log(`${playerName} has defeated Grant with ${playerHP} health left`)
+                console.log(`${playerName} has defeated Grant 3 times with ${playerHP} health left`)
                 wins++;
                 break;
             } else if (grantHP <=0) { //If you defeat grant 
                 grantHP=10;
                 wins++
+                console.log(`You have defeated the mighty Grant ${wins} times.`)
             }
         } else { //if player hp drops to 0 or below he loses
             console.log(`Grant the mighty chicken has slain you with ${grantHP} health left.`)
