@@ -1,11 +1,11 @@
 let playGame = prompt("Do you want to play? (YES or NO)")
-let playerName = prompt("What is your name?")
 
 let wins = 0;
 let playerHP = 40;
 let grantHP = 10;
 
 if (playGame === "yes"){
+    let playerName = prompt("What is your name?")
     while (wins <= 3){
         console.log(`${playerName} has ${playerHP} health left.`) //logs how much health is left
         console.log(`Grant the mighty chicken has ${grantHP} health left.`)
@@ -13,7 +13,7 @@ if (playGame === "yes"){
             playerHP -= Math.floor(Math.random() * 2) + 1;
             grantHP -= Math.floor(Math.random() * 2) + 1;
             if (grantHP <= 0 && wins === 2) { //IF you defeat grant and already have 2 previous wins
-                console.log(`${playerName} has defeated Grant 3 times with ${playerHP} health left`)
+                console.log(`${playerName} has defeated Grant the mighty chicken 3 times with ${playerHP} health left`)
                 wins++;
                 break;
             } else if (grantHP <=0) { //If you defeat grant 
