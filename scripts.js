@@ -3,12 +3,13 @@ let playerHP = 40;
 let grantHP = 10;
 
 function startGame() {
-    let playGame = prompt("Do you want to play? (YES or NO)")
+    let playGame = prompt("Do you want to play? (yes or no)")
     if (playGame === "yes") {
         let playerName = prompt("What is your name?")
         function startCombat() {
             while (wins <= 3) {
-                let continueCombat = prompt(`${playerName}, Would you like to continue?`)
+                let firstTime = true;
+                let continueCombat = prompt(`${playerName}, Would you like to attack? (yes or no)`)
                 if (continueCombat === "yes") {
                     if (playerHP > 0) { //if player hp is greater than 0 keep playing
                         const getDamage = function (damage) {
@@ -42,7 +43,7 @@ function startGame() {
         console.log("OK we'll play some other time.");
     } else { //if there's another input besides YES OR NO
         alert("Please type yes or no");
-        game(); //restart function
+        startGame(); //restart function
     }
 }
 startGame();
