@@ -1,3 +1,5 @@
+"use strict";
+
 let wins = 0;
 let playerHP = 40;
 let grantHP = 10;
